@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
 
 module.exports = client => {
-    console.log("Modulo de DESPEDIDA cargado!".green);
+    console.log("Modulo de DESPEDIDA cargado!".red);
     client.on("guildMemberRemove", (member) => {
         const WelcomeEmbed = new MessageEmbed()
         .setColor('#b362ef')
