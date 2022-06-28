@@ -27,27 +27,27 @@ async function generar_bienvenida(member, data) {
       //set the first text string 
       var textString3 = `${member.user.username}`;
       //if the text is too big then smaller the text
-      if (textString3.length >= 14) {
+      if (textString3.length >= 10) {
         ctx.font = 'bold 100px Genta';
         ctx.fillStyle = '#f2f2f2';
-        ctx.fillText(textString3, 720, canvas.height / 2 + 20);
+        ctx.fillText(textString3, 720, canvas.height / 2 + 10);
       }
       //else dont do it
       else {
         ctx.font = 'bold 150px Genta';
         ctx.fillStyle = '#f2f2f2';
-        ctx.fillText(textString3, 720, canvas.height / 2 + 20);
+        ctx.fillText(textString3, 720, canvas.height / 2 + 10);
       }
       //define the Discriminator Tag
       var textString2 = `#${member.user.discriminator}`;
       ctx.font = 'bold 40px Genta';
       ctx.fillStyle = '#f2f2f2';
-      ctx.fillText(textString2, 730, canvas.height / 2 + 58);
+      ctx.fillText(textString2, 730, canvas.height / 2 + 60);
       //define the Member count
       var textString4 = `Miembro #${member.guild.memberCount}`;
       ctx.font = 'bold 60px Genta';
       ctx.fillStyle = '#f2f2f2';
-      ctx.fillText(textString4, 750, canvas.height / 2 + 125);
+      ctx.fillText(textString4, 750, canvas.height / 2 + 135);
       //get the Guild Name
       //var textString4 = `💀 WINDEM 💀`;
       //ctx.font = 'bold 60px Genta';
