@@ -65,7 +65,7 @@ async function generar_bienvenida(member, data) {
         //get it as a discord attachment
       const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
         const WelcomeEmbed = new MessageEmbed()
-        .setColor('#0099ff')
+        .setColor('#b362ef')
         .setTitle('Bienvenid@ a 💀 WINDEM 💀')
         .setURL('https://discord.gg/sqAYjusc')
         .setDescription(`Hola <@${member.id}>! 
