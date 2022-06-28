@@ -5,7 +5,7 @@ module.exports = client => {
     console.log("Modulo de DESPEDIDA cargado!".green);
     client.on("guildMemberRemove", (member) => {
         const WelcomeEmbed = new MessageEmbed()
-        .setColor('#0099ff')
+        .setColor('#b362ef')
         .setTitle('Se nos fue un miembro!')
         .setURL('https://discord.gg/sqAYjusc')
         .setDescription(`Hasta luego <@${member.id}>! 
