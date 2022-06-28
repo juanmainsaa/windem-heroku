@@ -3,9 +3,7 @@ module.exports = (client) => {
     try {
         console.log(`
 ╔═════════════════════════════════════════════════════╗
-║                                                     ║
 ║   Bienvenido al Handler /-/   por Brainstito  /-/   ║
-║                                                     ║
 ╚═════════════════════════════════════════════════════╝`.yellow)
         let comandos = 0;
         fs.readdirSync("./comandos/").forEach((carpeta) => {
