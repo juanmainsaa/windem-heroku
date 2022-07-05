@@ -114,7 +114,18 @@ module.exports = async (client, Discord,) => {
     });
     let mID = m.id
 
-
+     client.distube
+    .on('finishSong', async (song) => {
+      if (!queue) {
+        return
+      }
+      if (queue.stopped) return
+      if (queue.prev) return
+      else
+      {
+      m.edit({ embeds: [new Discord.MessageEmbed().setTitle(`<:prev:987978423240654889> | Anterior \n\`${trimmedString} - ${song.formattedDuration}\``).setColor("#b362ef")],components: []});
+      };
+    })
 
     const collector = m.createMessageComponentCollector({ filter: i => i.isButton() && i.user && i.message.author.id == client.user.id, time: 400e3})
     collector.on("collect", async (interaction, message) => {
