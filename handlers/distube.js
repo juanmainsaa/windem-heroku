@@ -310,7 +310,7 @@ module.exports = async (client, Discord,) => {
       channel.send(`<:Ff:857761972494139422> | Ocurrio un error: ${e.toString().slice(0, 1974)}`)
       console.error(e)
     })
-    .on('empty',async channel => channel?.send({
+    .on('empty',async (queue) => queue.textChannel.send({
         embeds: [new Discord.MessageEmbed()
         .setDescription('Canal de voz vacio! Saliendo del canal...')
         .setColor("#b362ef")
