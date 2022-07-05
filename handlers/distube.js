@@ -89,7 +89,7 @@ module.exports = async (client, Discord,) => {
       let ChannelID = queue.textChannel.id
       var string = `${song.name}`;
       var length = 50;
-      var short = 38;
+      var short = 40;
       var trimmedString = string.length > length ? 
       string.substring(0, length - 3) + "..." : 
       string;
@@ -138,7 +138,7 @@ module.exports = async (client, Discord,) => {
               }
               if (queue.autoplay || queue.songs.length > 1){
                 if (!queue.paused) {
-                  await m.edit({ embeds: [new Discord.MessageEmbed().setDescription(`<:prev:987978423240654889> | Anterior \`${trimmedShort} - ${song.formattedDuration}\``).setColor("#b362ef")],components: []});
+                  await m.edit({ embeds: [new Discord.MessageEmbed().setDescription(`<:prev:987978423240654889> | Anterior \`${trimmedShort}\``).setColor("#b362ef")],components: []});
                   queue.skip(message)}
                   return;
                 }
@@ -157,7 +157,7 @@ module.exports = async (client, Discord,) => {
               {
               await queue.previous();
                 if (!queue.paused) {
-                  await m.edit({ embeds: [new Discord.MessageEmbed().setDescription(`<:next:987982303118639124> | Siguiente \`${trimmedShort} - ${song.formattedDuration}\``).setColor("#b362ef")],components: []})
+                  await m.edit({ embeds: [new Discord.MessageEmbed().setDescription(`<:next:987982303118639124> | Siguiente \`${trimmedShort}\``).setColor("#b362ef")],components: []})
                   //queue.skip(message)
                 }
                 if (queue.paused) {
