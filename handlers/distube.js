@@ -123,7 +123,7 @@ module.exports = async (client, Discord,) => {
       if (queue.prev) return
       else
       {
-      m.edit({ embeds: [new Discord.MessageEmbed().setTitle(`<:prev:987978423240654889> | Anterior \n\`${trimmedString} - ${song.formattedDuration}\``).setColor("#b362ef")],components: []});
+      m.edit({ embeds: [new Discord.MessageEmbed().setDescription(`<:prev:987978423240654889> | Anterior \`${trimmedShort} - ${song.formattedDuration}\``).setColor("#b362ef")],components: []});
       };
     })
 
